@@ -1,0 +1,17 @@
+<!doctype html>
+<!-- The 1200×630 link-preview image's source; tools/render-png.sh screenshots it to og.png. -->
+<html><head><meta charset="utf-8"><style>
+  @font-face { font-family: "IM Fell English"; src: url(../fonts/im-fell-english.woff2) format("woff2"); }
+  @font-face { font-family: "IM Fell English"; font-style: italic; src: url(../fonts/im-fell-english-italic.woff2) format("woff2"); }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0d1524; }
+  /* The scene at 0.75 scale, dropped so the horizon sits at y≈470 and the title has clear sky above the castle. */
+  .scene { position: absolute; left: 0; top: 155px; width: 1200px; height: 825px; }
+  .card { position: absolute; inset: 44px 0 auto; text-align: center; color: #e6e1d6;
+          font-family: "IM Fell English", Georgia, serif; }
+  .card img { width: 96px; height: 96px; }
+  h1 { font-weight: 400; font-size: 80px; line-height: 1; margin: 18px 0 10px; letter-spacing: -.01em; }
+  p { font-style: italic; font-size: 32px; margin: 0; color: #a9b2c3; }
+</style></head><body>
+  <img class="scene" src="../depths.svg" alt="">
+  <div class="card"><img src="../icon.svg" alt=""><h1>Corsair Cast</h1><p>Podcasts, no eldritch horrors.</p></div>
+</body></html>
