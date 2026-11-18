@@ -134,7 +134,8 @@ def icon(radius=228):
 """
 
 
-(SITE / "depths.svg").write_text(depths())
-(SITE / "icon.svg").write_text(icon())
-(SITE / "tools/touch-icon.svg").write_text(icon(radius=0))
-print("wrote depths.svg, icon.svg, tools/touch-icon.svg — now run tools/render-png.sh")
+if __name__ == "__main__":  # tools/build-header.py imports the scene without writing it.
+    (SITE / "depths.svg").write_text(depths())
+    (SITE / "icon.svg").write_text(icon())
+    (SITE / "tools/touch-icon.svg").write_text(icon(radius=0))
+    print("wrote depths.svg, icon.svg, tools/touch-icon.svg — now run tools/render-png.sh")

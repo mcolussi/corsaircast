@@ -9,5 +9,9 @@ The copy follows the App Store listing (`docs/app-store/listing.md` in the app r
 
     python3 -I tools/build-art.py   # depths.svg, icon.svg, tools/touch-icon.svg (reads the app repo's icon)
     tools/render-png.sh             # apple-touch-icon.png and og.png, with headless Chrome
+    python3 -I tools/build-header.py  # app-store/header.png and header.mov, the App Store product page header
 
 Fonts are self-hosted under the SIL Open Font License (`fonts/OFL-*.txt`).
+
+The header (3840 × 1646, a seamless 10 s loop with its first frame as the still) is uploaded by hand in App Store
+Connect; `tools/build-header.py` says how the scene is cropped for Apple's centred safe area.
