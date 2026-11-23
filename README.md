@@ -7,7 +7,8 @@ The copy follows the App Store listing (`docs/app-store/listing.md` in the app r
 
 ## Regenerating the art
 
-    python3 -I tools/build-art.py   # depths.svg, icon.svg, tools/touch-icon.svg (reads the app repo's icon)
+    python3 -I tools/build-art.py   # depths.svg (moving, like the header), depths-still.svg (Reduce Motion),
+                                    # icon.svg, tools/touch-icon.svg (reads the app repo's icon)
     tools/render-png.sh             # apple-touch-icon.png and og.png, with headless Chrome
     python3 -I tools/build-header.py  # app-store/header.png and header.mov, the App Store product page header
 

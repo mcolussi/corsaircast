@@ -31,7 +31,7 @@ def wave(t, cycles, phase=0.0):
 
 
 def frame(t):
-    s = art.depths()
+    s = art.depths(animated=False)  # The still scene: the frames below make their own motion.
     s = s.replace('viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice"',
                   f'viewBox="0 {CROP_TOP} 1600 {1600 * H / W:.0f}" width="{W}" height="{H}"')
     s = re.sub(r"<style>.*?</style>", "", s, flags=re.S)  # The site's CSS bob; the frames move the ship instead.

@@ -142,7 +142,11 @@
        src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a></p>
 </div>
 
-<img class="scene" src="depths.svg" alt="" aria-hidden="true">
+<!-- The scene moves like the App Store header; with Reduce Motion it holds still (its writhe can't obey CSS). -->
+<picture>
+  <source srcset="depths-still.svg" media="(prefers-reduced-motion: reduce)">
+  <img class="scene" src="depths.svg" alt="" aria-hidden="true">
+</picture>
 
 <main class="wrap">
   <div class="opening">
