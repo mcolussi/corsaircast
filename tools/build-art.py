@@ -80,7 +80,7 @@ CASTLE_SVG = f"""
 # The writhe is SMIL, since CSS can't morph a path in every browser; SMIL ignores prefers-reduced-motion, so
 # index.html swaps in depths-still.svg for that.
 LOOP, WRITHE_KEYS = 10.0, 16
-SHIMMER, DRIFT = 4.0, 8.0  # seconds per cycle
+SHIMMER, DRIFT = 6.0, 12.0  # seconds per cycle
 
 
 def writhe(i, x0, y0, h, length, w0, k0, k1):
