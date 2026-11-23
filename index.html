@@ -38,7 +38,6 @@
     --muted: #a9b2c3;       /* sea-tinted, not grey: 9.4:1 on --abyss, 8.6:1 on --sky */
     --red: #ee3934;         /* the icon's red: markers, selection */
     --red-text: #ff7a70;    /* links: 7.9:1 on --abyss; the icon red passes too (5.0:1) but reads heavy as text */
-    --red-button: #d9332e;  /* the icon red one step deeper: white on it is 4.7:1, on #ee3934 only 3.98:1 */
     --rule: #1c2840;
     --measure: 66ch;
   }
@@ -77,15 +76,12 @@
   .tagline { font: italic 400 clamp(1.25rem, 3vw, 1.6rem)/1.3 "IM Fell English", Georgia, serif;
              color: var(--muted); margin: 0 0 14px; }
   .lede { max-width: 34rem; margin: 0 auto 32px; color: var(--muted); }
-  .store {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--red-button); color: #fff; text-decoration: none;
-    font: 500 1.05rem/1 "Newsreader", Georgia, serif;
-    padding: 15px 26px; border-radius: 999px;
-    box-shadow: 0 6px 16px rgb(0 0 0 / .45);
-    transition: transform .25s cubic-bezier(.16, 1, .3, 1), box-shadow .25s;
-  }
-  a.store:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgb(0 0 0 / .5); }
+  /* Apple's badge, unaltered (their guidelines: no recolouring, no effects on the artwork, at least 40px tall).
+     The black badge carries its own grey keyline, which is what lets it sit on the dark sky. */
+  .store { display: inline-block; line-height: 0; border-radius: 10px;
+    transition: transform .25s cubic-bezier(.16, 1, .3, 1); }
+  .store img { display: block; height: 54px; width: auto; }
+  .store:hover { transform: translateY(-1px); }
 
   /* Uncropped where it fits, so its abyss-coloured bottom meets the page; on a phone, a tall crop held at the
      bottom (no seam) and centred on the ship rather than the castle. */
@@ -138,9 +134,10 @@
   <h1>Corsair Cast</h1>
   <p class="tagline">Podcasts, no eldritch horrors.</p>
   <p class="lede">A podcast player for iPhone and iPad that answers to you, not to advertisers.</p>
-  <!-- Until the app is live this is plain text, not a link. On launch: make it an <a class="store" href> to the
-       App Store page and swap in Apple's official "Download on the App Store" badge, which their guidelines require. -->
-  <p><span class="store">Coming soon to the App Store</span></p>
+  <!-- Apple's official badge (app-store-badge.svg, black, US-UK, from developer.apple.com), as their guidelines
+       require for a link to the App Store. -->
+  <p><a class="store" href="https://apps.apple.com/app/corsair-cast-podcast-player/id6819835769"><img
+       src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a></p>
 </div>
 
 <img class="scene" src="depths.svg" alt="" aria-hidden="true">
